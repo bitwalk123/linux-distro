@@ -1,0 +1,15 @@
+
+module my-lnusertemp 1.0;
+
+require {
+	type xdm_t;
+	type admin_home_t;
+	class dir create;
+	class lnk_file create;
+}
+
+#============= xdm_t ==============
+
+#!!!! This avc is allowed in the current policy
+allow xdm_t admin_home_t:dir create;
+allow xdm_t admin_home_t:lnk_file create;
